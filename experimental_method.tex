@@ -14,6 +14,7 @@ and one detector in the downstream region (downstream-MRD) around the central de
 \end{figure}
 
 
+\subsection{WAGASCI modules}
 The dimension of neutrino target region in one WAGASCI module is 
 100cm $\times$ 100cm in the x and y directions and 50cm along the beam direction.
 The total water mass serving as neutrino target is $\sim$400kg per each module (the remaining $\sim$ 100kg is the plastic scintillator mass).
@@ -38,7 +39,7 @@ The total number of channels in the two WAGASCI modules is 1280.
 \end{figure}
 
 
-
+\subsection{Side-MRD modules}
 The dimension of one side-MRD module is 161cm(width) $\times$ 180cm(height) 
 in a plane along the beam direction and 46cm perpendicular to the beam direction.
 The module consists of 11 3cm thick iron plates and 10 tracking scintillator planes.
@@ -66,37 +67,85 @@ in the material surrounding the WAGASCI modules, like the hall of the detector h
 \end{figure}
 
 
+\subsection{BabyMIND}
 As for the downstream-MRD, there is an update from the original proposal.
 We have decided to magnetize the downstream MRD to realize high charge identification efficiencies for $\mu^{+}$/$\mu^{-}$ down to 500 MeV/c,
-and the Baby MIND\cite{BabyMIND} is used as the downstream-MRD.
-The Baby MIND experiment is the approved project by the CERN Research Board in December 2015,
-and the Baby MIND is the magnetized MRD developed in the experiment.
-The dimension of Baby MIND is XXXcm $\times$ YYYcm 
-in a plane perpendicular to the beam direction and ZZcm along the beam direction.
-The module consists of N Xcm thick magnetized iron plates and N2 tracking scintillator planes.
-Each tracking scintillator layer of Baby MIND has N scintillator bars whose dimensions are
-Xcm $\times$ Zcm $\times$ Ycm making a plane measuring $X \times Y$cm$^{2}$
-in the horizontal and vertical directions as shown in Fig. \ref{ref:fig:scinti_layer_babymind}.
-The total number of channels in the Baby-MIND is N.
+and the Baby-MIND\cite{BabyMIND} is used as the downstream-MRD.
+The Baby-MIND experiment is the approved project by the CERN Research Board in December 2015,
+and the Baby-MIND is the magnetized MRD developed in the experiment.
+The dimension of the Baby-MIND is 350cm(width) $\times$ 200cm(height) 
+in a plane perpendicular to the beam direction and 451cm along the beam direction.
+% 33x5 + 19x4 + 200+10 = 451cm
+The module consists of 33 5cm-thick steel magnet modules and 19 4cm-thick scintillator detector modules.
+Fig. \ref{fig:baby_mind_layout} shows the layout of the Baby-MIND.
+
 
 \begin{figure}%[htbp]
   \begin{center}
-  \includegraphics[width=0.8\textwidth]{figs/mec_drawing_side_mrd.pdf}
-  \caption{Mechanical drawings of the side-MRD module.}
-  \label{fig:med_drawing_side_mrd}
+  \includegraphics[width=0.8\textwidth]{figs/baby_mind_layout.pdf}
+  \caption{Layout of the Baby-MIND. Muons incident from the left. 
+  Steel magnet modules are shown as s1 to s33, and scintillator detector modules are shown as d0 to d17.}
+  \label{fig:baby_mind_layout}
   \end{center}
 \end{figure}
 
 
-Scintillation light in the scintillator bar of WAGASCI modules and MRDs is collected and transported to a photodetector with a wavelength shifting fiber (WLS fiber).
-The light is read out by a photodetector, Multi-Pixel Photon Counter (MPPC), attached to one end of the 
+\subsubsection{Magnet modules}
+Dimensions of each magnet module are length 350cm, height 200cm, thickness 5cm,
+and its weight is 1900 kg.
+
+
+The magnetic flux was measured to be very uniform over the central tracking region
+from simulations as shown in Fig. \ref{fig:mag_simulation_baby_mind}.
+This was confirmed by measuring the field with 9 pick-up coils wound around the first module.
+All 33 modules achieve the required field of 1.5T for a current of 140 A.
+
+\begin{figure}%[htbp]
+  \begin{center}
+  \includegraphics[width=1.0\textwidth]{figs/mag_simulation_baby_mind.pdf}
+  \caption{Complete return of the magnetic flux requires cross-sections A-A' and B-B' to be equal (Left figure). Magnetic field map with a 280cm long coil, 1.5kA (Right figure).}
+  \label{fig:mag_simulation_baby_mind}
+  \end{center}
+\end{figure}
+
+
+The total power consumption for 33 magnet modules is 12 kW.
+This is derived from the coil resistance inferred from the voltage drop across the power supply.
+Two power supplies have been purchased to power the Baby MIND magnet,
+compatible with operation both in CERN and in Japan.
+
+
+\subsubsection{Scintillator detector modules}
+A half of scintillator detector modules has 8 vertical scintillator bars
+(dimensions: 195cm $\times$ 21cm $\times$ 0.7cm)
+and 95 horizontal bars (dimensions: 290 cm x 3 cm x 0.7cm).
+Each half-module is assembled independently, then coupled to its corresponding half-module
+to form a complete module, \ref{fig:scinti_layer_baby_mind}.
+The weight of each scintillator detector module is 300 kg.
+
+\begin{figure}%[htbp]
+  \begin{center}
+  \includegraphics[width=0.8\textwidth]{figs/scinti_layer_baby_mind.pdf}
+  \caption{One scintillator detector module consists of two half-modules.}
+  \label{fig:scinti_layer_baby_mind}
+  \end{center}
+\end{figure}
+
+
+
+\subsection{Scintillation light measurement and readout electronics}
+Scintillation light in the scintillator bar of the WAGASCI modules, the side-MRD modules and Baby-MIND is collected and transported to a photodetector with a wavelength shifting fiber (WLS fiber).
+The light is read out by a photodetector, Multi-Pixel Photon Counter (MPPC), attached the 
 WLS fiber.
+One-side readout is adapted for the WAGASCI modules,
+and two-side readout is adapted for the side-MRD modules and Baby-MIND.
 The signal from the MPPC is read out by the dedicated electronics developed for the test experiment
 to enable bunch separation in the beam spill.
 The readout electronics is triggered using the beam-timing signal from J-PARC MR to synchronize to the beam.
 The beam-timing signal is branched from those for T2K, and will not cause any effect on the T2K data taking.
 
 
+\subsection{Candidate experimental site}
 T2K is adopting the off-axis beam method, in which the neutrino beam is directed 2.5 degrees
 away from SK producing a narrowband $\nu_{\mu}$ beam.
 The off-axis near detector, ND280, is installed towards the SK direction in the B1 floor of the near detector hall of the J-PARC neutrino beamline.
@@ -105,17 +154,54 @@ where the off-axis angle is similar, and therefore an energy spectrum similar to
 The candidate detector position in the B2 floor is shown in Fig. \ref{fig:detector_position_b2}.
 The expected neutrino energy spectrum at the candidate position is shown in Fig. \ref{fig:nu_flux_b2}.
 
+\begin{figure}%[htbp]
+  \begin{center}
+  \includegraphics[width=0.7\textwidth]{figs/detector_position_b2.pdf}
+  \caption{Candidate detector position in the B2 floor of the T2K near detector hall.}
+  \label{fig:detector_position_b2}
+  \end{center}
+\end{figure}
 
+\begin{figure}%[htbp]
+  \begin{center}
+  \includegraphics[width=0.6\textwidth]{figs/nu_flux_b2.pdf}
+  \caption{Neutrino energy spectrum at the candidate experimental site (blue). 
+  The spectra at the ND280 site (black) and INGRID center module (red) are also shown.}
+  \label{fig:nu_flux_b2}
+  \end{center}
+\end{figure}
+
+
+\subsection{Staging approarch}
 We are adopting a staging approach to provide the outcomes in a timely manner.
 As a prototype measurement, we had constructed one WAGASCI module and started neutrino beam measurement in SS floor of the near detector hall from October 2016.
 In the prototype measurement, WAGASCI module is placed in front of the existing T2K on-axis near detector, INGRID as shown in Fig. \ref{fig:SS_config}.
 Here, the INGRID modules are used as downstream MRDs.
 The preliminary results from the prototype measurements are summarized in Sec. \ref{sec:achievements}.
-As a rehearsal of the neutrino beam measurement in B2 floor of the near detector hall,
-we are constructing another WAGASCI module and are planning to perform neutrino beam measurement in B2 floor from October 2017 to March 2018.
-In the rehearsal, the WAGASCI module is placed between the INGRID standard module and INGRID Proton module as shown in Fig. \ref{fig:B2_test_config}.
+
+\begin{figure}%[htbp]
+  \begin{center}
+  \includegraphics[width=1.0\textwidth]{figs/SS_config.pdf}
+  \caption{Detector configuration of the prototype measurement.}
+  \label{fig:SS_config}
+  \end{center}
+\end{figure}
+
+
+A rehearsal of the neutrino beam measurement in B2 floor of the near detector hall
+will be performed  from October 2017 to March 2018.
+In the rehearsal, one WAGASCI module is placed between the INGRID standard module and INGRID Proton module as shown in Fig. \ref{fig:B2_test_config}.
 Here, the INGRID modules are used as a downstream MRD and another neutrino target detector.
 The INGRID modules are the ones which are not used for the T2K neutrino beam monitoring,
 and will not cause any effect on the T2K data taking.
 We had submitted a proposal to T2K collaboration, and got an approval to use these modules for the rehearsal.
+
+\begin{figure}%[htbp]
+  \begin{center}
+  \includegraphics[width=0.7\textwidth]{figs/B2_test_config.pdf}
+  \caption{Detector configuration of the prototype measurement.}
+  \label{fig:B2_tes_config}
+  \end{center}
+\end{figure}
+
 Finally, we will install two WAGASCI modules, two side MRD modules and Baby MIND in B2 floor of the near detector hall and will complete the detector commissioning by the end of March 2018, and will start neutrino beam measurement with the baseline configuration from April 2018.
