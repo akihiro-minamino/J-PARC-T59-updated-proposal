@@ -1,16 +1,24 @@
 \section{Experimental method}
-Fig. \ref{fig:T59_detectors} shows a schematic view of the entire set of detectors.
+Fig. \ref{fig:t59_detectors} shows a schematic view of the entire set of detectors.
 Two central detectors, WAGASCI modules, contain the neutrino target material, water, and plastic scintillator bars,
 and are placed along the beam direction.
 The muon range detectors (MRDs) consist of two detectors in the side region (side-MRD modules)
 and one detector in the downstream region (downstream-MRD) around the central detector.
+
+\begin{figure}%[htbp]
+  \begin{center}
+  \includegraphics[width=0.6\textwidth]{figs/t59_detectors.pdf}
+  \caption{Schematic view of the entire set of detectors.}
+  \label{fig:t59_detectors}
+  \end{center}
+\end{figure}
 
 
 The dimension of neutrino target region in one WAGASCI module is 
 100cm $\times$ 100cm in the x and y directions and 50cm along the beam direction.
 The total water mass serving as neutrino target is $\sim$400kg per each module (the remaining $\sim$ 100kg is the plastic scintillator mass).
 Inside the WAGASCI modules, plastic scintillator bars are aligned as a 3D grid-like structure,
-shown in Fig. \ref{fig:wagasci_concept}, and spaces in the structure are filled with water.
+shown in Fig. \ref{fig:3d_grid_structure}, and spaces in the structure are filled with water.
 When neutrinos interact with hydrogen and oxygen in water, charged particles are generated.
 Neutrino interactions are identified by detecting tracks of charged particles through plastic scintillator bars.
 Thanks to the 3D grid-like structure of the scintillator bars,
@@ -19,16 +27,27 @@ Thin plastic scintillator bars (thickness $\sim$ 0.3cm) are used for the WAGASCI
 to reduce the mass ratio of scintillator bars to neutrino target materials,
 because neutrino interactions in the scintillator bars are a background for the cross section measurements.
 Scintillator bars whose dimensions are 2.5cm $\times$ 0.3cm $\times$ 100cm are used for the WAGASCI modules.
-The total number of channels in the two WAGASCI modules is XXX.
+The total number of channels in the two WAGASCI modules is 1280.
+
+\begin{figure}%[htbp]
+  \begin{center}
+  \includegraphics[width=0.6\textwidth]{figs/3d_grid_structure.pdf}
+  \caption{Schematic view of 3D grid-like structure of plastic scintillator bars inside the WAGASCI module.}
+  \label{fig:3d_grid_structure}
+  \end{center}
+\end{figure}
 
 
-The dimension of one side-MRD module is XXXcm $\times$ YYYcm 
-in a plane along the beam direction and ZZcm perpendicular to the beam direction.
-The module consists of N Xcm thick iron plates and N2 tracking scintillator planes.
-Each tracking scintillator layer of the module has N scintillator bars whose dimensions are
-20cm $\times$ 1cm $\times$ 300cm making a plane measuring $300\times200$cm$^{2}$
+
+The dimension of one side-MRD module is 161cm(width) $\times$ 180cm(height) 
+in a plane along the beam direction and 46cm perpendicular to the beam direction.
+The module consists of 11 3cm thick iron plates and 10 tracking scintillator planes.
+Each tracking scintillator layer of the module has 8 scintillator bars whose dimensions are
+20cm(width) $\times$ 0.7cm(thickness) $\times$ 180cm(length) making a plane measuring $160\times180$cm$^{2}$
 in the horizontal and vertical directions.
-The total number of channels in the side MRD modules is N.
+The total number of channels in two side-MRD modules is 160.
+The mechanical drawings of the side MRD are shown in Fig. \ref{fig:mec_drawing_side_mrd}.
+The total weight of one side-MRD module is less than 10 ton, and it can be moved to the B2 floor using the crane in the NM pit.
 The role of the side-MRD modules is the selection of muon tracks from the charged-current (CC) interactions and the rejection of short tracks caused by neutral particles, neutron and gammas,
 that originate mainly from neutrino interactions in material surrounding the WAGASCI modules,
 like the wall of the detector hall, or neutral-current (NC) interactions.
@@ -38,19 +57,35 @@ direction of motion of charged particles from the hit-time difference between th
 and reject charged-particle background that originates from neutrino interactions
 in the material surrounding the WAGASCI modules, like the hall of the detector hall and the side-MRD modules themselves.
 
+\begin{figure}%[htbp]
+  \begin{center}
+  \includegraphics[width=0.8\textwidth]{figs/mec_drawing_side_mrd.pdf}
+  \caption{Mechanical drawings of the side-MRD module.}
+  \label{fig:med_drawing_side_mrd}
+  \end{center}
+\end{figure}
+
 
 As for the downstream-MRD, there is an update from the original proposal.
 We have decided to magnetize the downstream MRD to realize high charge identification efficiencies for $\mu^{+}$/$\mu^{-}$ down to 500 MeV/c,
-and the Baby MIND\cite{BabyMIND}, is the baseline downstream-MRD.
+and the Baby MIND\cite{BabyMIND} is used as the downstream-MRD.
 The Baby MIND experiment is the approved project by the CERN Research Board in December 2015,
 and the Baby MIND is the magnetized MRD developed in the experiment.
 The dimension of Baby MIND is XXXcm $\times$ YYYcm 
-in a plane along the beam direction and ZZcm perpendicular to the beam direction.
+in a plane perpendicular to the beam direction and ZZcm along the beam direction.
 The module consists of N Xcm thick magnetized iron plates and N2 tracking scintillator planes.
 Each tracking scintillator layer of Baby MIND has N scintillator bars whose dimensions are
 Xcm $\times$ Zcm $\times$ Ycm making a plane measuring $X \times Y$cm$^{2}$
 in the horizontal and vertical directions as shown in Fig. \ref{ref:fig:scinti_layer_babymind}.
-The total number of channels in the downstream MRD is N.
+The total number of channels in the Baby-MIND is N.
+
+\begin{figure}%[htbp]
+  \begin{center}
+  \includegraphics[width=0.8\textwidth]{figs/mec_drawing_side_mrd.pdf}
+  \caption{Mechanical drawings of the side-MRD module.}
+  \label{fig:med_drawing_side_mrd}
+  \end{center}
+\end{figure}
 
 
 Scintillation light in the scintillator bar of WAGASCI modules and MRDs is collected and transported to a photodetector with a wavelength shifting fiber (WLS fiber).
